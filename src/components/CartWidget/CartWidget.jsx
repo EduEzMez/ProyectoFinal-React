@@ -1,5 +1,5 @@
-import Cart from "./assets/cart.svg"
-import './cart-style.css'
+import Cart from "../assets/cart.svg"
+import 'cart-style.css'
 const CartWidget = () => {
     return (
         <div className="contenedor_cardw">
