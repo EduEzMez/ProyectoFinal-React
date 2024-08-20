@@ -9,7 +9,6 @@ function App() {
     <>
       <NavBar></NavBar>
       <ItemListContainer greeting = {'BIENVENIDO A NUESTRA TIENDA'}></ItemListContainer>
-      <Button texto="AYUDA"></Button>
     </>
   )
 }
