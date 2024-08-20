@@ -1,11 +1,13 @@
-import Boton from "./boton"
+import Button from "../Button/Button"
+import CartWidget from "../CartWidget/CartWidget";
+
 const NavBar = () =>{
     return(
         <>
         <section className="contenedor_header">
             <section className="contenedor_mensaje">
                 <div>
-                    <p>DESCUENTOS DEL 20% PARA LOS DIAS VIERNES</p>
+                    <p>DESCUENTO DEL 20% CON TODOS LOS MEDIOS DE PAGOS</p>
                 </div>
             </section>
             <section className="contenedor_navbar">
@@ -15,9 +17,10 @@ const NavBar = () =>{
                     </div>
                 </div>
                 <div className="contenedor_menu"> 
-                    <a href="http://"><Boton texto="INICIO"></Boton></a>
-                    <a href="http://"><Boton texto="TIENDA"></Boton></a>
-                    <a href="http://"><Boton texto="AYUDA"></Boton></a>
+                    <a href="index.html"><Button texto="INICIO"></Button></a>
+                    <a href="index.html"><Button texto="TIENDA"></Button></a>
+                    <a href="index.html"><Button texto="AYUDA"></Button></a>
+                    <CartWidget></CartWidget>
                 </div>
             </section>
         </section>

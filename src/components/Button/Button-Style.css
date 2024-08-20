@@ -1,0 +1,12 @@
+a{
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #34495e;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a:hover{
+    background-color: crimson;
+}

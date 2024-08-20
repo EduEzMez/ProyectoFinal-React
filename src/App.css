@@ -22,7 +22,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
 }
 
 .contenedor_mensaje p{
@@ -37,7 +36,6 @@
   flex-direction: row;
   width: 100%;
   height: 17vh;
-  background-color: rgb(109, 112, 198);
 }
 
 .boton_pri{
@@ -53,13 +51,31 @@
   }
 }
 
+.contenedor_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contenedor_logo .logo{
   font-family: "Bebas Neue", sans-serif;
-  font-size: 2em;
+  font-size: 4em;
 }
 
 .contenedor_logo .logo span{
   color: crimson;
 }
+
+.contenedor_menu{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contenedor_menu a{
+  margin: 0 5px;
+}
+
 
 

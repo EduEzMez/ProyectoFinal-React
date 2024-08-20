@@ -1,0 +1,20 @@
+.contenedor_cardw{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+img{
+    width: 40px;
+}
+
+.num_item{
+    background-color: crimson;
+    color: white;
+    padding: 0 3px;
+    border-radius: 10px;
+    position: relative;
+    top:-10px;
+    left: -10px
+}
