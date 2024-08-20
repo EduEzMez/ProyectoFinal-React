@@ -21,6 +21,7 @@ const NavBar = () =>{
                     <a href="index.html"><Button texto="TIENDA"></Button></a>
                     <a href="index.html"><Button texto="AYUDA"></Button></a>
                     <CartWidget></CartWidget>
+                    <a href="index.html"><Button texto="AYUDA"></Button></a>
                 </div>
             </section>
         </section>

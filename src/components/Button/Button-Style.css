@@ -1,12 +1,17 @@
 a{
-    color: white;
     font-size: 15px;
     text-decoration: none;
+}
+
+.boton_pri{
+    color: white;
+    width: 5em;
     background-color: #34495e;
     padding: 10px;
     border-radius: 10px;
 }
 
-a:hover{
+.boton_pri:hover{
+    transition: 0.3s ease-in-out;
     background-color: crimson;
 }
