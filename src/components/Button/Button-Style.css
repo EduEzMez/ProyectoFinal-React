@@ -15,4 +15,5 @@ a{
 .boton_pri:hover{
     transition: 0.3s ease-in-out;
     background-color: crimson;
+    cursor: pointer;
 }
