@@ -1,5 +1,6 @@
 import "./card-style.css"
 import Button from "../Button";
+import ItemCount from "../ItemCount/ItemCount";
 
 const Card = (prop) => {
     return(
@@ -11,6 +12,7 @@ const Card = (prop) => {
                 <h3 className="card_titulo">{prop.titulo}</h3>
             </div>
             <p className="card_parrafo">{prop.parrafo}</p>
+            <ItemCount></ItemCount>
             <Button texto="Comprar"></Button>
         </section>
     )
