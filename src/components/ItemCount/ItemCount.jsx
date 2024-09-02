@@ -16,20 +16,22 @@ function ItemCount(){
         console.log("Cantidad agregada:",{cantidad})
     }
 
-
+  //https://fkhadra.github.io/react-toastify/introduction/
     const notify = () => toast('Agregado al carrito!', {
         position: "top-center",
         autoClose: 800,
         pauseOnHover: true,
         progress: undefined,
         theme: "dark",
-        });;
+    });;
 
     return (
         <div>
             <p>{cantidad}</p>
             <button onClick={aumentarProducto}>+</button>
             <button onClick={descontarProducto}>-</button>
+            {/* Asi puedo agregar dos variables en una misma accion de boton 
+            () => {agregarCarrito(); notify()} */}
             <button onClick={() => {agregarCarrito(); notify()}}>Agregar</button>
             <ToastContainer></ToastContainer>
         </div>
