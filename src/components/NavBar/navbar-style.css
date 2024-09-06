@@ -40,9 +40,7 @@
   
   .boton_pri{
     text-decoration: none;
-    
   }
-  
   
   @media (max-width: 500px){
     .contenedor_navbar{

@@ -1,5 +1,11 @@
+import "./home.css"
+
 const Home = () => {
-    return <h2>Pagina Home</h2>
+    return(
+        <section className="home_contenedor">
+            <p>Bienvenido a KEY<span>!</span>BOARD</p>
+        </section>
+    )
 }
 
 export default Home

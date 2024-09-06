@@ -1,16 +1,17 @@
 import Button from "../Button"
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from 'react-router-dom';
 import "./navbar-style.css"
 
 const NavBar = () =>{
     return(
         <>
         <header>
-        <section className="contenedor_header">
-            <section className="contenedor_mensaje">
-                <div>
-                    <p>DESCUENTO DEL 20% CON TODOS LOS MEDIOS DE PAGOS</p>
-                </div>
+            <section className="contenedor_header">
+                <section className="contenedor_mensaje">
+                    <div>
+                        <p>20% DE DESCUENTO CON TODOS LOS MEDIOS DE PAGOS</p>
+                    </div>
             </section>
             <section className="contenedor_navbar">
                 <div className="contenedor_logo">
@@ -19,13 +20,13 @@ const NavBar = () =>{
                     </div>
                 </div>
                 <div className="contenedor_menu"> 
-                    <a href="index.html"><Button texto="INICIO"></Button></a>
-                    <a href="index.html"><Button texto="TIENDA"></Button></a>
-                    <a href="index.html"><Button texto="AYUDA"></Button></a>
+                    <Link to={"/"}><Button texto="Inicio"></Button></Link> 
+                    <Link to={"/tienda"}><Button texto="TIENDA"></Button></Link>
+                    <Link to={"/ayuda"}><Button texto="AYUDA"></Button></Link>
                     <CartWidget></CartWidget>
                 </div>
             </section>
-        </section>
+            </section>
         </header>
         </>
     )
