@@ -6,7 +6,7 @@
 .saludo-contenedor{
     width: 100%;
     height: 10dvi;
-    background-image: url(public/assets/banner.webp);
+    background-image: url(/public/assets/banner.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
