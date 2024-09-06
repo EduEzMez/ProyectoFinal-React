@@ -1,9 +1,11 @@
 import Button from "../Button"
 import CartWidget from "../CartWidget/CartWidget";
+import "./navbar-style.css"
 
 const NavBar = () =>{
     return(
         <>
+        <header>
         <section className="contenedor_header">
             <section className="contenedor_mensaje">
                 <div>
@@ -24,6 +26,7 @@ const NavBar = () =>{
                 </div>
             </section>
         </section>
+        </header>
         </>
     )
 }

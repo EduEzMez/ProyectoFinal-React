@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import "./itemCard-style.css"
 
