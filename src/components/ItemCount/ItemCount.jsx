@@ -27,7 +27,7 @@ function ItemCount(){
     });
 
     return (
-        <div>
+        <div className="itemcount-contenedor">
             <p>{cantidad}</p>
             <button onClick={aumentarProducto}>+</button>
             <button onClick={descontarProducto}>-</button>

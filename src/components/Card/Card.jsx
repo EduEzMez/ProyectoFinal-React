@@ -1,5 +1,4 @@
 import "./card-style.css"
-import Button from "../Button";
 import ItemCount from "../ItemCount/ItemCount";
 
 const Card = (prop) => {
@@ -13,7 +12,6 @@ const Card = (prop) => {
             </div>
             <p className="card_parrafo">{prop.parrafo}</p>
             <ItemCount></ItemCount>
-            <Button texto="Comprar"></Button>
         </section>
     )
 }

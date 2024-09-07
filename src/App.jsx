@@ -1,13 +1,18 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar'
 import ItemListContainer from "./components/ItemListContainer";
 import Card from './components/Card/Card';
 import './App.css'
 
+
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
     <header>
+      <Routes>
+        <Route path='/store' element={<Card></Card>}></Route>
+      </Routes>
       <NavBar></NavBar>
       <ItemListContainer greeting = {'BIENVENIDO A NUESTRA TIENDA'}>
       </ItemListContainer>
@@ -18,8 +23,9 @@ function App() {
         <Card titulo="Teclado 2" src="./src/assets/img2.webp" parrafo="loren"></Card>
         <Card titulo="Teclaso 3" src="./src/assets/img3.webp" parrafo="loren"></Card>
         <Card titulo="Teclado 4" src="./src/assets/img4.webp" parrafo="loren"></Card>
+        <Card titulo="Teclado 4" src="./src/assets/img4.webp" parrafo="loren"></Card>
       </section>
-    </>
+    </BrowserRouter>
   )
 }
 
