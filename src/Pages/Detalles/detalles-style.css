@@ -1,0 +1,16 @@
+.error_contenedor{
+    margin: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error_contenedor img{
+    width: 400px;
+}
+
+.error_producto{
+    text-align: center;
+    font-size: 2rem;
+}

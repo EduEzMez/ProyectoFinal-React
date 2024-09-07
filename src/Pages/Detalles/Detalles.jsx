@@ -1,6 +1,7 @@
 import { useEffect , useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail";
+import "./detalles-style.css"
 
 const Detalles = () => {
     let [producto, setProducto] = useState();
@@ -19,7 +20,7 @@ const Detalles = () => {
     return (
         
         <section>
-            {producto ? <ItemDetail {...producto} /> : <p>Cargando...</p>}
+            {producto ? <ItemDetail {...producto} /> : <div className="error_contenedor"><img src="../public/assets/error.png" alt="" /><p className="error_producto">Producto no encontrado</p></div>}
         </section>
     )
 }
