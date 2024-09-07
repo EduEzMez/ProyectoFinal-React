@@ -1,32 +1,28 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar'
 import ItemListContainer from "./components/ItemListContainer";
-import Card from './components/Card/Card';
+import Ayuda from "./Pages/Ayuda"
+import Error from './Pages/Error/Error';
+import Detalles from './Pages/Detalles';
 import './App.css'
+import Home from './Pages/Home';
 
 
 function App() {
-
   return (
-    <BrowserRouter>
-    <header>
-      <Routes>
-        <Route path='/store' element={<Card></Card>}></Route>
-      </Routes>
-      <NavBar></NavBar>
-      <ItemListContainer greeting = {'BIENVENIDO A NUESTRA TIENDA'}>
-      </ItemListContainer>
-    </header>
-
-      <section className='main_contenedor'>
-        <Card titulo="Teclado 1" src="./src/assets/img1.webp" parrafo="loren"></Card>
-        <Card titulo="Teclado 2" src="./src/assets/img2.webp" parrafo="loren"></Card>
-        <Card titulo="Teclaso 3" src="./src/assets/img3.webp" parrafo="loren"></Card>
-        <Card titulo="Teclado 4" src="./src/assets/img4.webp" parrafo="loren"></Card>
-        <Card titulo="Teclado 4" src="./src/assets/img4.webp" parrafo="loren"></Card>
-      </section>
-    </BrowserRouter>
+    <>
+      <BrowserRouter basename="/ProyectoFinal-React">
+        <NavBar></NavBar>
+        <Routes>
+          <Route exact path='/' element={<Home />}/>
+          <Route exact path='/tienda' element={<ItemListContainer greeting={'Nuestra Tienda'}/>}/>
+          <Route exact path='/detalles/:id' element={<Detalles/>}/>
+          <Route exact path='/ayuda' element={<Ayuda/>}/>
+          <Route path='*' element={<Error />}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
-export default App
+export default App;

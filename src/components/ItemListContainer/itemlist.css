@@ -2,3 +2,32 @@
     padding: 10px;
     margin: 10px;
 }
+
+.saludo-contenedor{
+    width: 100%;
+    height: 10dvi;
+    background-image: url(/public/assets/banner.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-clip: content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saludo-contenedor h1{
+    color: white;
+    text-shadow: 2px 3px 2px crimson;
+    box-shadow: 0px 0px 55px black;
+    border-radius: 40px;
+    animation: float 3s ease-out infinite;
+    background-color: rgba(0, 0, 0, 0.821);
+    padding: 20px;
+}
+
+@keyframes float {
+    50%{
+        transform: translateY(10px);
+    }
+}

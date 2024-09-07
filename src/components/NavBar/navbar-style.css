@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  
+  header{
+    text-align: center;
+  }
+  
+  .contenedor_header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contenedor_mensaje{
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contenedor_mensaje p{
+    font-weight: 400;
+    font-size: 12px;
+  }
+  
+  .contenedor_navbar{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 17vh;
+  }
+  
+  .boton_pri{
+    text-decoration: none;
+  }
+  
+  @media (max-width: 500px){
+    .contenedor_navbar{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .contenedor_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contenedor_logo .logo{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4em;
+  }
+  
+  .contenedor_logo .logo span{
+    color: crimson;
+  }
+  
+  .contenedor_menu{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .contenedor_menu a{
+    margin: 0 5px;
+  }
+  
+  .main_contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  
+  }
+  
+  
+  

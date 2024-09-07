@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import "./itemc-style.css"
 function ItemCount(){
 
     const [cantidad, setCantidad] = useState(0);
@@ -18,22 +18,25 @@ function ItemCount(){
     }
 
   //https://fkhadra.github.io/react-toastify/introduction/
-    const notify = () => toast('Agregado al carrito!', {
+    const notify = () => toast.success('Agregado al carrito!', {
         position: "top-center",
         autoClose: 800,
-        pauseOnHover: true,
+        hideProgressBar: false,
+        pauseOnHover: false,
+        closeOnClick: false,
+        draggable: false,
         progress: undefined,
-        theme: "dark",
+        theme: "colored",
     });
 
     return (
-        <div className="itemcount-contenedor">
+        <div>
             <p>{cantidad}</p>
             <button onClick={aumentarProducto}>+</button>
             <button onClick={descontarProducto}>-</button>
             {/* Asi puedo agregar dos variables en una misma accion de boton 
             () => {agregarCarrito(); notify()} */}
-            <button onClick={() => {agregarCarrito(); notify()}}>Agregar</button>
+            <button className="boton-agregar" onClick={() => {agregarCarrito(); notify()}}>Agregar al carrito</button>
             <ToastContainer></ToastContainer>
         </div>
     )
