@@ -1,9 +1,13 @@
-const ItemDetail = ({ id, imagen, nombre, descripcion, precio}) => {
+import ItemCount from "../ItemCount/ItemCount";
+
+const ItemDetail = ({ id, imagen, nombre, descripcion, precio }) => {
     return(
         <section>
-
-            <p>***{nombre}***</p>
-
+            <img src={imagen} alt={descripcion} />
+            <p>nombre{nombre}</p>
+            <p>descriptcion{descripcion}</p>
+            <p>precio{precio}</p>
+            <ItemCount></ItemCount>
         </section>
     )
 }

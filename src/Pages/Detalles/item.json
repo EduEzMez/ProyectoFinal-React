@@ -1,0 +1,30 @@
+[   
+    {
+        "id": 1,
+        "imagen": "./public/assets/img1.webp",
+        "nombre": "Teclado 1",
+        "descripcion": "Teclado mecanico color negro",
+        "precio": 3000
+    },
+    {
+        "id": 2,
+        "imagen": "./public/assets/img2.webp",
+        "nombre": "Teclado 2",
+        "descripcion": "Teclado mecanico color blanco",
+        "precio": 3000
+    },
+    {
+        "id": 3,
+        "imagen": "./public/assets/img3.webp",
+        "nombre": "Teclado 3",
+        "descripcion": "Teclado mecanico color azul",
+        "precio": 3000
+    },
+    {
+        "id": 4,
+        "imagen": "./public/assets/img4.webp",
+        "nombre": "Teclado 4",
+        "descripcion": "Teclado mecanico color rosa",
+        "precio": 3000
+    }
+]

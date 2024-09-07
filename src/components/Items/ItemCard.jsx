@@ -1,10 +1,12 @@
-import ItemCount from "../ItemCount/ItemCount";
+
 import "./itemCard-style.css"
+import { Link } from "react-router-dom";
 
 const Item = ({ id, imagen, nombre, descripcion, precio }) => {
     return(
+        <Link to={`/detalles/${id}`}>
         <section className="card_contenedor">
-            {/* <Link to={`/detalle/${id}`}> */}
+            
             <div className="imagen_contenedor">
                 <img className="card_img" src={imagen} alt={descripcion} />
             </div>
@@ -15,9 +17,8 @@ const Item = ({ id, imagen, nombre, descripcion, precio }) => {
                 <p className="descripcion">{descripcion}</p>
             </div>
             <h4>{precio}</h4>
-            <ItemCount></ItemCount>
-            {/* </Link> */}
         </section>
+        </Link>
     )
 }
 

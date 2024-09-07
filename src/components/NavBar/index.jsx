@@ -20,7 +20,7 @@ const NavBar = () =>{
                     </div>
                 </div>
                 <div className="contenedor_menu"> 
-                    <Link to={"/"}><Button texto="Inicio"></Button></Link> 
+                    <Link to={"/"}><Button texto="INICIO"></Button></Link> 
                     <Link to={"/tienda"}><Button texto="TIENDA"></Button></Link>
                     <Link to={"/ayuda"}><Button texto="AYUDA"></Button></Link>
                     <CartWidget></CartWidget>

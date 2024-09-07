@@ -3,7 +3,7 @@ import NavBar from './components/NavBar'
 import ItemListContainer from "./components/ItemListContainer";
 import Ayuda from "./Pages/Ayuda"
 import Error from './Pages/Error/Error';
-import Detalles from './Pages/Detalles';
+import Detalles from './Pages/Detalles/Detalles';
 import './App.css'
 import Home from './Pages/Home';
 
