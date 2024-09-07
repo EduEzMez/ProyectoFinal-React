@@ -9,7 +9,8 @@ const Detalles = () => {
     console.log(id)
     
     useEffect(() => {
-        fetch('../public/item.json') 
+        // fetch('../public/item.json') 
+        fetch('../src/components/Data/item.json') 
             .then(resultado => resultado.json())
             .then(data => setProducto(data.find(item => item.id == id )));
     },[id]);

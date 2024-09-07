@@ -30,13 +30,15 @@ function ItemCount(){
     });
 
     return (
-        <div>
-            <p>{cantidad}</p>
-            <button onClick={aumentarProducto}>+</button>
-            <button onClick={descontarProducto}>-</button>
-            {/* Asi puedo agregar dos variables en una misma accion de boton 
-            () => {agregarCarrito(); notify()} */}
-            <button className="boton-agregar" onClick={() => {agregarCarrito(); notify()}}>Agregar al carrito</button>
+        <div className="cantidad_contenedor">
+            <p className="cantidad">{cantidad}</p>
+            <div>
+                <button className="boton" onClick={aumentarProducto}>+</button>
+                <button className="boton "onClick={descontarProducto}>-</button>
+            </div>
+            <div>
+                <button className="boton-agregar" onClick={() => {agregarCarrito(); notify()}}>Agregar al carrito</button>
+            </div>
             <ToastContainer></ToastContainer>
         </div>
     )
