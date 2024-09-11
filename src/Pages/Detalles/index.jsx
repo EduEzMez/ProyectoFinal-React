@@ -3,16 +3,15 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail";
 
 const Detalles = () => {
-    const { id } = useParams();
+    const { id } = useParams(null);
     let [item, setItem] = useState();
-
     useEffect(() => {
-        fetch("/Data/item.json") 
+        fetch('src/components/Data/item.json')
             .then(resultado => resultado.json())
-            .then(data => setItem(data.find(item => item.id == id )));
-    },[id])
+            .then(data => setItem(data.find(item => item.id === Number(id))));
+    })
 
-    return <ItemDetail {...item} />;
+return <ItemDetail {...item} />;
     
 }
 
