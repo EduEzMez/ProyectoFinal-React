@@ -1,0 +1,99 @@
+.idetail_contenedor{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+.contenedor_cental{
+    background-color: rgb(188, 188, 188);
+    max-width: 50%;
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 4px 3px 100px rgb(152, 152, 152);
+    border-radius: 20px;
+} @media (max-width: 1200px){
+    .idetail_contenedor .contenedor_cental{
+        padding: 10px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: none;
+    }
+}
+
+.img_contenedor{
+    padding: 10px;
+    width: 55%;
+    height: auto;
+} @media (max-width: 1200px){
+    .img_contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+    }
+}
+
+.img_contenedor img{
+    border-radius: 20px 0px 0px 20px; 
+    float: right;
+    width: 30rem;
+    height: auto;
+} @media (max-width: 1200px){
+    .img_contenedor img{
+        width: 15rem;
+        border-radius: 20px;
+    }
+}
+
+
+.datos_contenedor{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} @media (max-width: 1200px){
+    .datos_contenedor{
+        width: 80%;
+    }
+}
+
+.datos_contenedor h2{
+    padding: 20px;
+    font-size: 50px;
+} @media (max-width: 1200px){
+    .datos_contenedor h2{
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+.datos_contenedor .descripcion{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(27, 33, 80);
+    padding: 10px;
+} @media (max-width: 1200px){
+    .datos_contenedor .descripcion{
+        font-size: 15px;
+    }
+}
+
+.datos_contenedor .precio{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+    
+
+

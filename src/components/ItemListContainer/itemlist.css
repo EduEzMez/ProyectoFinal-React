@@ -5,7 +5,7 @@
 
 .saludo-contenedor{
     width: 100%;
-    height: 10dvi;
+    height: 300px;
     background-image: url(/public/assets/banner.webp);
     background-position: center;
     background-repeat: no-repeat;
@@ -23,11 +23,15 @@
     border-radius: 40px;
     animation: float 3s ease-out infinite;
     background-color: rgba(0, 0, 0, 0.821);
-    padding: 20px;
+    padding: 10px;
 }
 
 @keyframes float {
     50%{
         transform: translateY(10px);
     }
+}
+
+.contenedor_cards{
+    padding: 30px;
 }
