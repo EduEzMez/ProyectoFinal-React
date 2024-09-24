@@ -16,7 +16,7 @@ const Item = ({ id, imagen, nombre, descripcion, precio }) => {
             <div className="card_parrafo">
                 <p className="descripcion">{descripcion}</p>
             </div>
-            <h4>{precio}</h4>
+            <h4>${precio}</h4>
         </section>
         </Link>
     )
