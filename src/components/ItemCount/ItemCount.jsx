@@ -1,23 +1,27 @@
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "./itemc-style.css"
-function ItemCount(){
+import "./itemc-style.css";
 
+const ItemCount = ({ onAdd }) => {
     const [cantidad, setCantidad] = useState(0);
+    
     const aumentarProducto = () => {
-        setCantidad(cantidad + 1)
-    }
-    const descontarProducto = () => {
-        if (cantidad > 0){
-            setCantidad(cantidad - 1)
-        }
-    }
-    const agregarCarrito = () => {
-        console.log("Cantidad agregada:",{cantidad})
-    }
+        setCantidad(cantidad + 1);
+    };
 
-  //https://fkhadra.github.io/react-toastify/introduction/
+    const descontarProducto = () => {
+        if (cantidad > 0) {
+            setCantidad(cantidad - 1);
+        }
+    };
+
+    const agregarCarrito = () => {
+        onAdd(cantidad);
+        console.log("Cantidad agregada:", { cantidad });
+    };
+    
+
     const notify = () => toast.success('Agregado al carrito!', {
         position: "top-center",
         autoClose: 800,
@@ -34,13 +38,14 @@ function ItemCount(){
             <p className="cantidad">{cantidad}</p>
             <div>
                 <button className="boton" onClick={aumentarProducto}>+</button>
-                <button className="boton "onClick={descontarProducto}>-</button>
+                <button className="boton" onClick={descontarProducto}>-</button>
             </div>
             <div>
-                <button className="boton-agregar" onClick={() => {agregarCarrito(); notify()}}>Agregar al carrito</button>
+                <button className="boton-agregar" onClick={agregarCarrito}>Agregar al carrito</button>
             </div>
-            <ToastContainer></ToastContainer>
+            <ToastContainer />
         </div>
-    )
-}
+    );
+};
+
 export default ItemCount;
