@@ -29,11 +29,13 @@ const Cart = () => {
 
     return (
         <div className="cart-container">
-            <h2>Tu Carrito</h2>
+            <div>
+                <h2>Tu Carrito</h2>
+            </div>
             {cart.length === 0 ? (
                 <p>No hay productos en el carrito.</p>
             ) : (
-                <ul>
+                <ul className='estilo_individual'>
                     {cart.map(item => (
                         <li key={item.id}>
                             <img src={item.imagen} alt={item.descripcion} />
