@@ -3,7 +3,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 
-const ItemDetail = ({ id, imagen2, nombre, descripcion2, precio }) => {
+const ItemDetail = ({ id, imagen, imagen2, nombre, descripcion, descripcion2, precio }) => {
 
     const [quantityAdded, setQuantityAdded] = useState(0)
     
@@ -13,7 +13,7 @@ const ItemDetail = ({ id, imagen2, nombre, descripcion2, precio }) => {
         setQuantityAdded(quantity)
 
         const item = {
-            id, nombre, precio 
+            id, imagen, nombre, precio 
         }
         addItem(item, quantity)
     }
@@ -24,7 +24,7 @@ const ItemDetail = ({ id, imagen2, nombre, descripcion2, precio }) => {
         <section className="idetail_contenedor">
             <div className="contenedor_cental">
                 <div className="img_contenedor">
-                    <img src={imagen2} alt={descripcion2} />
+                    <img src={imagen2} alt={descripcion} />
                 </div>
             <div className="datos_contenedor">
                 <h2>{nombre}</h2>
