@@ -8,6 +8,7 @@ import './App.css'
 import Home from './Pages/Home';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart';
+import CompraRealizada from './components/Cart/CompraRealizada';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route exact path='/detalles/:id' element={<Detalles/>}/>
           <Route exact path="/carrito" element={<Cart/>} />
           <Route exact path='/ayuda' element={<Ayuda/>}/>
+          <Route path='/compra-realizada' element={<CompraRealizada/>}/>
           {/* <Route path='*' element={<Error />}/> */}
           </Routes>
         </CartProvider>

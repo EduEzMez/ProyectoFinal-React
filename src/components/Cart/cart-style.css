@@ -52,3 +52,17 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.boton-compra {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.boton-compra:hover {
+    background-color: #218838;
+}

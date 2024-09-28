@@ -1,15 +1,17 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import './cart-style.css';
 
 const Cart = () => {
     const { cart, setCart } = useContext(CartContext);
+    const navigate = useNavigate();
 
-    const removeItem = (id) => {
+    const removerItem = (id) => {
         setCart(cart.filter(item => item.id !== id));
     };
 
-    const increaseQuantity = (id) => {
+    const incrementarQuantity = (id) => {
         const item = cart.find(item => item.id === id);
         if (item) {
             item.quantity += 1;
@@ -17,14 +19,18 @@ const Cart = () => {
         }
     };
 
-    const decreaseQuantity = (id) => {
+    const restarQuantity = (id) => {
         const item = cart.find(item => item.id === id);
         if (item && item.quantity > 1) {
             item.quantity -= 1;
             setCart([...cart]);
         } else if (item) {
-            removeItem(id);
+            removerItem(id);
         }
+    };
+
+    const compraLista = () => {
+        navigate('/compra-realizada');
     };
 
     return (
@@ -35,19 +41,22 @@ const Cart = () => {
             {cart.length === 0 ? (
                 <p>No hay productos en el carrito.</p>
             ) : (
-                <ul className='estilo_individual'>
-                    {cart.map(item => (
-                        <li key={item.id}>
-                            <img src={item.imagen} alt={item.descripcion} />
-                            <h3>{item.nombre}</h3>
-                            <p>Cantidad: {item.quantity}</p>
-                            <p>Precio: ${item.precio * item.quantity}</p>
-                            <button onClick={() => increaseQuantity(item.id)}>+</button>
-                            <button onClick={() => decreaseQuantity(item.id)}>-</button>
-                            <button onClick={() => removeItem(item.id)}>Eliminar</button>
-                        </li>
-                    ))}
-                </ul>
+                <>
+                    <ul className="estilo_individual">
+                        {cart.map(item => (
+                            <li key={item.id}>
+                                <img src={item.imagen} alt={item.descripcion} />
+                                <h3>{item.nombre}</h3>
+                                <p>Cantidad: {item.quantity}</p>
+                                <p>Precio: ${item.precio * item.quantity}</p>
+                                <button onClick={() => incrementarQuantity(item.id)}>+</button>
+                                <button onClick={() => restarQuantity(item.id)}>-</button>
+                                <button onClick={() => removerItem(item.id)}>Eliminar</button>
+                            </li>
+                        ))}
+                    </ul>
+                    <button className="boton-compra" onClick={compraLista}>Realizar compra</button>
+                </>
             )}
         </div>
     );
