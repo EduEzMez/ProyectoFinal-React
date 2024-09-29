@@ -1,41 +1,58 @@
-import "./idetail-style.css"
+import "./idetail-style.css";
 import ItemCount from "../ItemCount/ItemCount";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
 
-const ItemDetail = ({ id, imagen, imagen2, nombre, descripcion, descripcion2, precio }) => {
+// Simulación del spinner
+const Spinner = () => {
+    return (
+        <div className="spinner-container">
+            <div className="spinner"></div>
+        </div>
+    );
+};
 
-    const [quantityAdded, setQuantityAdded] = useState(0)
-    
-    const { addItem } = useContext(CartContext)
+const ItemDetail = ({ id, imagen, imagen2, nombre, descripcion, descripcion2, precio }) => {
+    const [quantityAdded, setQuantityAdded] = useState(0);
+    const [loading, setLoading] = useState(true); //
+
+    const { addItem } = useContext(CartContext);
 
     const handleOnAdd = (quantity) => {
-        setQuantityAdded(quantity)
+        setQuantityAdded(quantity);
 
         const item = {
-            id, imagen, nombre, precio 
-        }
-        addItem(item, quantity)
-    }
+            id, imagen, nombre, precio
+        };
+        addItem(item, quantity);
+    };
 
+    useEffect(() => {
+        
+        setTimeout(() => {
+            setLoading(false); 
+        }, 1000);
+    }, []);
 
-
-    return(
+    return (
         <section className="idetail_contenedor">
-            <div className="contenedor_cental">
-                <div className="img_contenedor">
-                    <img src={imagen2} alt={descripcion} />
+            {loading ? ( 
+                <Spinner />
+            ) : ( 
+                <div className="contenedor_cental">
+                    <div className="img_contenedor">
+                        <img src={imagen2} alt={descripcion} />
+                    </div>
+                    <div className="datos_contenedor">
+                        <h2>{nombre}</h2>
+                        <p className="descripcion">{descripcion2}</p>
+                        <p className="precio">${precio}.-</p>
+                        <ItemCount onAdd={handleOnAdd} />
+                    </div>
                 </div>
-            <div className="datos_contenedor">
-                <h2>{nombre}</h2>
-                <p className="descripcion">{descripcion2}</p>
-                <p className="precio">${precio}.-</p>
-                <ItemCount onAdd={handleOnAdd} />
-                
-            </div>
-        </div>  
+            )}
         </section>
-    )
-}
+    );
+};
 
 export default ItemDetail;

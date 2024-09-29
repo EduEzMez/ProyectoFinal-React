@@ -29,6 +29,10 @@ const Cart = () => {
         }
     };
 
+    const calcularTotal = () => {
+        return cart.reduce((total, item) => total + (item.precio * item.quantity), 0);
+    };
+
     const compraLista = () => {
         navigate('/compra-realizada');
     };
@@ -55,7 +59,10 @@ const Cart = () => {
                             </li>
                         ))}
                     </ul>
-                    <button className="boton-compra" onClick={compraLista}>Realizar compra</button>
+                    <div className="compra-total">
+                        <p><strong>Total: ${calcularTotal()}</strong></p>
+                        <button className="boton-compra" onClick={compraLista}>Realizar compra</button>
+                    </div>
                 </>
             )}
         </div>
